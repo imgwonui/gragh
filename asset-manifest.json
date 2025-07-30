@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gragh/static/css/main.25bc4ac5.css",
-    "main.js": "/gragh/static/js/main.3f91ee69.js",
+    "main.js": "/gragh/static/js/main.ec214d4b.js",
     "static/js/453.8662837f.chunk.js": "/gragh/static/js/453.8662837f.chunk.js",
     "static/media/pretendard-latin-700-normal.woff": "/gragh/static/media/pretendard-latin-700-normal.1f1dbbbf311ffffcc770.woff",
     "static/media/pretendard-latin-600-normal.woff": "/gragh/static/media/pretendard-latin-600-normal.9f6b39f88e7e6a3fd0b2.woff",
@@ -11,11 +11,11 @@
     "static/media/pretendard-latin-400-normal.woff2": "/gragh/static/media/pretendard-latin-400-normal.38bed7de46e7b9049ced.woff2",
     "index.html": "/gragh/index.html",
     "main.25bc4ac5.css.map": "/gragh/static/css/main.25bc4ac5.css.map",
-    "main.3f91ee69.js.map": "/gragh/static/js/main.3f91ee69.js.map",
+    "main.ec214d4b.js.map": "/gragh/static/js/main.ec214d4b.js.map",
     "453.8662837f.chunk.js.map": "/gragh/static/js/453.8662837f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25bc4ac5.css",
-    "static/js/main.3f91ee69.js"
+    "static/js/main.ec214d4b.js"
   ]
 }
