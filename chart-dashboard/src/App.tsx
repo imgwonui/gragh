@@ -92,7 +92,7 @@ function App() {
   const [barMeaning, setBarMeaning] = useState<string>('회사 수');
   const [lineMeaning, setLineMeaning] = useState<string>('발송 건수');
   const [chartTitle, setChartTitle] = useState<string>('데이터 차트');
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large' | 'extra-large'>('medium');
+  const [fontSize, setFontSize] = useState<number>(12);
 
   const handleBarDataChange = (newBarData: DataPoint[]) => {
     setBarData(newBarData);

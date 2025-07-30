@@ -198,7 +198,7 @@ type DesignTheme = 'modern' | 'neon' | 'pastel' | 'dark' | 'minimal';
 
 type ChartStyle = 'classic' | 'rounded' | 'sharp' | 'wave' | 'gradient' | 'neon-glow';
 
-type FontSize = 'small' | 'medium' | 'large' | 'extra-large';
+type FontSize = number;
 
 interface ChartStyleConfig {
   name: string;
@@ -459,13 +459,7 @@ export const ChartComponent: React.FC<ChartComponentProps> = ({
     }
   };
   const getFontSize = (size: FontSize) => {
-    switch (size) {
-      case 'small': return '10px';
-      case 'medium': return '12px';
-      case 'large': return '16px';
-      case 'extra-large': return '20px';
-      default: return '12px';
-    }
+    return `${size}px`;
   };
 
   const renderChart = (): React.ReactElement => {
@@ -667,7 +661,7 @@ export const ChartComponent: React.FC<ChartComponentProps> = ({
             </Pie>
             <Tooltip contentStyle={theme.tooltipStyle} />
             <Legend 
-              wrapperStyle={{ fontSize: '14px', color: theme.textColor }}
+              wrapperStyle={{ fontSize: '23px', color: theme.textColor }}
             />
           </PieChart>
         );
@@ -732,7 +726,7 @@ export const ChartComponent: React.FC<ChartComponentProps> = ({
               />
             </Line>
             <Legend 
-              wrapperStyle={{ fontSize: '14px', color: theme.textColor, paddingTop: '0px', marginTop: '0px' }}
+              wrapperStyle={{ fontSize: '23px', color: theme.textColor, paddingTop: '0px', marginTop: '0px' }}
             />
             <defs>
               {style.gradientType === 'linear' && (
@@ -958,12 +952,11 @@ export const ChartComponent: React.FC<ChartComponentProps> = ({
           
           <FontSizeSelector
             value={fontSize}
-            onChange={(e) => onFontSizeChange(e.target.value as FontSize)}
+            onChange={(e) => onFontSizeChange(parseInt(e.target.value) as FontSize)}
           >
-            <option value="small">글씨 작게</option>
-            <option value="medium">글씨 보통</option>
-            <option value="large">글씨 크게</option>
-            <option value="extra-large">글씨 매우크게</option>
+            {Array.from({ length: 41 }, (_, i) => i + 10).map(size => (
+              <option key={size} value={size}>{size}px</option>
+            ))}
           </FontSizeSelector>
           
           <DownloadButton onClick={handleDownload}>📥 이미지 다운로드</DownloadButton>
